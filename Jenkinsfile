@@ -62,10 +62,10 @@ pipeline {
       //       }
       //    }
       // }
-      stage('Run Anchore') {
-         steps {
-            anchore name: 'anchore_images'
-         }
-      }
+      // stage('Run Anchore') {
+      //    steps {
+      //       anchore name: 'anchore_images'
+      //    }
+      // }
    }
 }
