@@ -18,5 +18,11 @@ pipeline {
             """)
           }
         }
+        stage('Echo on master') {
+           when {branch 'master'}
+           steps {
+              echo 'This is master branch'
+           }
+        }
     }
 }
