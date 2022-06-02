@@ -24,5 +24,11 @@ pipeline {
               echo 'This is master branch'
            }
         }
+        stage('Echo on add-tests') {
+           when {branch 'add-tests'}
+           steps {
+              echo 'This is add-tests branch'
+           }
+        }
     }
 }
