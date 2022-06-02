@@ -35,20 +35,20 @@ pipeline {
             }
          }
       }
-      stage('Run Tests') {
-         steps {
-            pwsh(script: """
-               pytest ./tests/test_sample.py
-            """)
-         }
-      }
-      stage('Stop test app') {
-         steps {
-            pwsh(script: """
-               docker-compose down
-            """)
-         }
-      }
+      // stage('Run Tests') {
+      //    steps {
+      //       pwsh(script: """
+      //          pytest ./tests/test_sample.py
+      //       """)
+      //    }
+      // }
+      // stage('Stop test app') {
+      //    steps {
+      //       pwsh(script: """
+      //          docker-compose down
+      //       """)
+      //    }
+      // }
       stage('Push Container') {
          steps {
             echo "Workspace is $WORKSPACE"
